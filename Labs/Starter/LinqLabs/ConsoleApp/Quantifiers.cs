@@ -13,18 +13,18 @@ namespace ConsoleApp {
              * Is there any word in the royal title of Prince Philip with an i after an e?
              */
 
-            //bool iAfterE = ??
+            bool iAfterE = words.Any(w => w.Contains("ie"));
 
-            //Console.WriteLine($"There is at least a word in the list that contains 'ei': {iAfterE}");
+            Console.WriteLine($"There is at least a word in the list that contains 'ei': {iAfterE}");
         }
 
         public static void SickLeaveHoursLessThan21() {
             IEnumerable<Employee> employees = DataSource.Employees;
             //Are there any employees with less than 21 sick leave hours?
 
-            //bool areThere = ??
-            //Console.WriteLine("Are there any employees with less than 21 sick leave hours?: " +
-            //    (areThere ? "Yes" : "No"));
+            bool areThere = employees.Any(e => e.SickLeaveHours < 21);
+            Console.WriteLine("Are there any employees with less than 21 sick leave hours?: " +
+            (areThere ? "Yes" : "No"));
         }
 
         public static void AllMatchedElements() {
@@ -34,9 +34,9 @@ namespace ConsoleApp {
              * Discover if there are underage employees 
              */
 
-            //bool AllMoreThan18 = ??
+            bool AllMoreThan18 = employees.All(e => calculateAge(e.BirthDate) > 18);
 
-            //Console.WriteLine($"All employees have age > 18: {AllMoreThan18}");
+            Console.WriteLine($"All employees have age > 18: {AllMoreThan18}");
         }
 
         private static int calculateAge(DateTime dateOfBirth) {

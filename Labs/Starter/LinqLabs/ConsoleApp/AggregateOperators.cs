@@ -12,9 +12,9 @@ namespace ConsoleApp {
              */
             IEnumerable<Employee> employees = DataHelper.DataSource.Employees;
 
-            //int howManyEMployees = ??
+            int howManyEMployees = employees.Count();
 
-            //Console.WriteLine($"There are {howManyEMployees} employees.");
+            Console.WriteLine($"There are {howManyEMployees} employees.");
         }
 
         public static void CountConditional() {
@@ -23,19 +23,19 @@ namespace ConsoleApp {
              * How many female employees do we have?
              */
 
-            //int howManyEMployees = ??
+            int howManyEMployees = employees.Count(e => e.Gender == 0);
 
-            //Console.WriteLine($"There are {howManyEMployees} female employees.");
+            Console.WriteLine($"There are {howManyEMployees} female employees.");
         }
 
         public static void SickLeaveHours() {
             IEnumerable<Employee> employees = DataSource.Employees;
 
-            //How many employees have less than 21 sick leave hours?
+            // How many employees have less than 21 sick leave hours?
 
-            //int count = ??
+            int count = employees.Count(c => c.SickLeaveHours < 21);
 
-            //Console.WriteLine($"Number of employees with less than 21 sick leave hours: {count}");
+            Console.WriteLine($"Number of employees with less than 21 sick leave hours: {count}");
         }
         public static void SumSyntax() {
             IEnumerable<Employee> employees = DataSource.Employees;
@@ -45,9 +45,9 @@ namespace ConsoleApp {
              * How many sick leave hours did our office experience in total?
              */
 
-            //int totalSickLeaveHours = ??
+            int totalSickLeaveHours = sickLeaveHours.Sum();
 
-            //Console.WriteLine($"The total of sick leave hours is {totalSickLeaveHours}");
+            Console.WriteLine($"The total of sick leave hours is {totalSickLeaveHours}");
         }
 
         public static void SumProjection() {

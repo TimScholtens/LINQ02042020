@@ -6,7 +6,14 @@ using System.Linq;
 namespace ConsoleApp {
     class Program {
         static void Main(string[] args) {
-            LeftJoin.CrossGroupJoin();
+            // LeftJoin.CrossGroupJoin();
+            // Generators.RangeOfIntegers();
+            // Generators.RepeatEnemy();
+            // AggregateOperators.CountSyntax();
+            // AggregateOperators.CountConditional();
+            // AggregateOperators.SickLeaveHours();
+            // AggregateOperators.SumSyntax();
+            
             Console.ReadLine();
         }
 

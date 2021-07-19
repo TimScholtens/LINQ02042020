@@ -14,9 +14,9 @@ namespace ConsoleApp {
              * Select only the first element from the buildings whose price is less than 439.000
              */
 
-            //Building product = ??
+            Building product = buildings.First(p => p.Price < 439_000M);
 
-            //Console.WriteLine(product);
+            Console.WriteLine(product);
         }
 
         public static void FirstMatchingElement() {
@@ -26,10 +26,10 @@ namespace ConsoleApp {
              * Select the first building of the "Storage Area" category
              */
 
-            //Building building = ??
+            Building building = buildings.First(b => b.Category == "Storage area");
 
-            //Console.WriteLine($"First Storage Area Building: {building}");
-            
+            Console.WriteLine($"First Storage Area Building: {building}");
+
         }
 
         public static void MaybeFirstElement() {
@@ -40,9 +40,9 @@ namespace ConsoleApp {
              * Should there be no building matching this criteria, select null instead
              */
 
-            //Building building = ??
+            Building building = buildings.FirstOrDefault(b => b.Price < 10_000M);
 
-            //Console.WriteLine(building);
+            Console.WriteLine(building);
         }
 
         public static void MaybeFirstMatchingElement() {
@@ -52,9 +52,9 @@ namespace ConsoleApp {
              * Should there be no building matching this criteria, select null instead
              */
 
-            //Building building = ??
+            Building building = buildings.FirstOrDefault(b => b.Price <= 10_000M);
 
-            //Console.WriteLine(building);
+            Console.WriteLine(building);
         }
 
         public static void ElementAtPosition() {
@@ -63,9 +63,9 @@ namespace ConsoleApp {
              * Extract the 6th title of Prince Philip
              */
 
-            //string title =  ??
+            string title = titles.ElementAt(5);
 
-            //Console.WriteLine($"The 6th title is: {title}");
+            Console.WriteLine($"The 6th title is: {title}");
         }
     }
 }
